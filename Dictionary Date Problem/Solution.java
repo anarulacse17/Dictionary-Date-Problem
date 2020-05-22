@@ -51,7 +51,7 @@ public class Solution {
           int_array.add(t+a);
   } 
     }
-    //For printing in the list in Date format so converting it into stringbuffer and string
+    //For printing the list in Date format so converting it into stringbuffer and string
      System.out.print("{ ");
      
     for(int i=0;i<date_array.size();i++){
