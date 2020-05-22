@@ -4,7 +4,6 @@ public class Solution {
    public static void main(String args[]) { 
          Scanner sc= new Scanner(System.in);
          String dates;
-         Long sum=null;
          System.out.println("Enter the dates with average one by one");
          System.out.println();
          int n=sc.nextInt();
