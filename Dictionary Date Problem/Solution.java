@@ -50,10 +50,8 @@ public class Solution {
 
      for(int j=0;j<p;j++){
           Long a=average.get(i);
-          System.out.println(a+" this is avg");
-          Long t=int_array.get(k++);
-          System.out.println(t+" this is t");
-          int_array.add(t+a);
+           Long t=int_array.get(k++);
+            int_array.add(t+a);
   } 
     }
     //For printing the list in Date format so converting it into stringbuffer and string
