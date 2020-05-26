@@ -25,29 +25,34 @@ public class Solution {
     
     //Defining the logic and storing everything index by index 
      for(int i=0;i<date.size()-1;i++){ 
-      perform.add(date.get(i+1)-date.get(i));//subtracting the next date with previous one and storing into arraylist
-      perform2.add(number.get(i+1)-number.get(i));//subtracting the next corresponding integer with previous one and storing into arraylist
-      average.add(perform2.get(i)/perform.get(i));//dividing the result of corresponding integer by result of date and storing into arraylist
-    }
+      perform.add(i,date.get(i+1)-date.get(i));//subtracting the next date with previous one and storing into arraylist
+      perform2.add(i,number.get(i+1)-number.get(i));//subtracting the next corresponding integer with previous one and storing into arraylist
+      average.add(i,perform2.get(i)/perform.get(i)); //dividing the result of corresponding integer by result of date and storing into arraylist
+
+         
+     }
     
       date_array.add(date.get(0)); // initially giving value to new arrayL which will store the result of date 
       int_array.add(number.get(0));//initially giving value to new arrayL which will store the result of corresponding integer
     //performing the operation and incrementing date according to difference
+       Long val=date_array.get(0);
        for(int i=0;i<perform.size();i++){
       Long p=perform.get(i);
            for(int j=0;j<p;j++){
-     Long val=date_array.get(i+j);
-         val++;
+               val++;
          date_array.add(val);
        }  
    }
+   int k=0;
     //performing the operation and adding avg value according to the result stores in average arrayL corresponding according to difference
    for(int i=0;i<perform.size();++i){
     int p=perform.get(i).intValue();
 
      for(int j=0;j<p;j++){
           Long a=average.get(i);
-          Long t=int_array.get(i+j);
+          System.out.println(a+" this is avg");
+          Long t=int_array.get(k++);
+          System.out.println(t+" this is t");
           int_array.add(t+a);
   } 
     }
