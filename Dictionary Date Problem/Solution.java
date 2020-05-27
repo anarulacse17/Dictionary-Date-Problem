@@ -2,7 +2,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.io.*;
-public class Example {
+public class Solution {
     public static void Dictionary(String []D)
     {
         ArrayList<String> date= new ArrayList<String>();
